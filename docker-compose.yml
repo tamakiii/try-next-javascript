@@ -5,3 +5,5 @@ services:
     working_dir: /web/try-next-javascript
     volumes:
       - .:/web/try-next-javascript
+    ports:
+      - 9001:9001
