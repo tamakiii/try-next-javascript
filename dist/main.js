@@ -24961,6 +24961,10 @@ module.exports = function(originalModule) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const React = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 const styled_components_1 = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.es.js");
+function default_1(props) {
+    return React.createElement(Button, null, props.content);
+}
+exports.default = default_1;
 const Button = styled_components_1.default.button `
   border-radius: 3px;
   padding: 0.25em 1em;
@@ -24969,12 +24973,6 @@ const Button = styled_components_1.default.button `
   color: palevioletred;
   border: 2px solid palevioletred;
 `;
-class MyComponent extends React.Component {
-    render() {
-        return React.createElement(Button, null, this.props.content);
-    }
-}
-exports.default = MyComponent;
 
 
 /***/ }),
