@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack --colors --mode production",
-    "build-dev": "webpack --colors --mode development --watch --progress"
+    "build-dev": "webpack --colors --mode development --watch --progress",
+    "storybook": "start-storybook -p 9001 -c .storybook"
   },
   "repository": {
     "type": "git",
