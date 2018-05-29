@@ -1,8 +1,12 @@
 import * as React from 'react';
 import styled, { css } from 'styled-components'
 
-export interface Props {
+interface Props {
   content: string;
+}
+
+export default function (props: Props) {
+	return <Button>{props.content}</Button>
 }
 
 const Button = styled.button`
@@ -13,9 +17,3 @@ const Button = styled.button`
   color: palevioletred;
   border: 2px solid palevioletred;
 `;
-
-export default class MyComponent extends React.Component<Props, {}> {
-  render() {
-    return <Button>{this.props.content}</Button>
-  }
-}
