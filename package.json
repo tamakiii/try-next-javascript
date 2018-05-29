@@ -23,6 +23,7 @@
   "devDependencies": {
     "@types/react": "^16.3.14",
     "@types/react-dom": "^16.0.5",
+    "ts-loader": "^4.3.0",
     "webpack": "^4.10.0"
   }
 }
