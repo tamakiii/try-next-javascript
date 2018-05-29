@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/tamakiii/try-next-javascript/issues"
   },
-  "homepage": "https://github.com/tamakiii/try-next-javascript#readme"
+  "homepage": "https://github.com/tamakiii/try-next-javascript#readme",
+  "dependencies": {
+    "react": "^16.4.0"
+  }
 }
