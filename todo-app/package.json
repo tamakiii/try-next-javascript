@@ -2,6 +2,7 @@
   "name": "try-next-javascript--todo-app",
   "version": "0.0.0",
   "description": "",
+  "private": true,
   "main": "index.js",
   "dependencies": {
     "webpack": "^4.12.0"
