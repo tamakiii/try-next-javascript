@@ -6,7 +6,6 @@ import registerServiceWorker from './registerServiceWorker';
 import { createStore } from 'redux';
 import { enthusiasm } from './reducers/index';
 import { StoreState }  from './types/index';
-import { Provider } from 'react-redux';
 import { EnthusiasmAction } from './actions';
 
 const store = createStore<StoreState, EnthusiasmAction, any, any>(enthusiasm, {
@@ -15,9 +14,7 @@ const store = createStore<StoreState, EnthusiasmAction, any, any>(enthusiasm, {
 })
 
 ReactDOM.render(
-  <Provider store={store}>
-    <App />
-  </Provider>,
+  <App store={store} />,
   document.getElementById('root') as HTMLElement
 );
 registerServiceWorker();
