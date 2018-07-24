@@ -59,23 +59,9 @@ module.exports = {
   module: {
     rules: [
       {
+        test: /\.js$/,
         include: [path.resolve(__dirname, 'src')],
-        loader: 'babel-loader',
-
-        options: {
-          plugins: ['syntax-dynamic-import'],
-
-          presets: [
-            [
-              'env',
-              {
-                modules: false
-              }
-            ]
-          ]
-        },
-
-        test: /\.js$/
+        loader: 'babel-loader'
       },
       {
         test: /\.css$/,
