@@ -46,6 +46,8 @@ module.exports = {
   mode: 'development',
 
   entry: {
+    main: './src/main.js',
+    sakana: './src/sakana.js',
     era: './src/era.js',
     kama: './src/kama.js',
     zeigo: './src/zeigo.js'
