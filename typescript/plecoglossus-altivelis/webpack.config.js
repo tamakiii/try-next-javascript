@@ -43,6 +43,19 @@ const precss = require('precss');
 const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 
 module.exports = {
+  mode: 'development',
+
+  entry: {
+    era: './src/era.js',
+    kama: './src/kama.js',
+    zeigo: './src/zeigo.js'
+  },
+
+  output: {
+    filename: '[name].[chunkhash].js',
+    path: path.resolve(__dirname, 'dist')
+  },
+
   module: {
     rules: [
       {
@@ -92,19 +105,6 @@ module.exports = {
       }
     ]
   },
-
-  entry: {
-    era: './src/era.js',
-    kama: './src/kama.js',
-    zeigo: './src/zeigo.js'
-  },
-
-  output: {
-    filename: '[name].[chunkhash].js',
-    path: path.resolve(__dirname, 'dist')
-  },
-
-  mode: 'development',
 
   optimization: {
     splitChunks: {
