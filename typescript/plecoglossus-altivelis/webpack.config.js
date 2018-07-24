@@ -94,9 +94,9 @@ module.exports = {
   },
 
   entry: {
-    era: 'src/era.js',
-    kama: 'src/kama.js',
-    zeigo: 'src/zeigo.js'
+    era: './src/era.js',
+    kama: './src/kama.js',
+    zeigo: './src/zeigo.js'
   },
 
   output: {
