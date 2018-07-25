@@ -4,7 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-      "build-dev": "webpack --mode development --watch --progress"
+    "build-dev": "webpack --mode development --watch --progress"
   },
   "dependencies": {
     "@types/react": "^16.4.7",
