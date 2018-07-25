@@ -3,7 +3,9 @@
   "version": "0.0.0",
   "main": "index.js",
   "license": "MIT",
-  "dependencies": {},
+  "dependencies": {
+    "react": "^16.4.1"
+  },
   "devDependencies": {
     "@webpack-cli/init": "^0.1.0",
     "autoprefixer": "^9.0.1",
