@@ -1,12 +1,14 @@
-YARN_CACHE_DIR ?= $(shell docker-compose run --rm node yarn cache dir | sed $$'s/\e\\[[[:digit:]][KG]//g')
+DIR_YARN_CACHE := /usr/local/share/.cache/yarn/v1
+PORT_STORYBOOK := 6006
 
-setup:
+setup: .env
 	docker-compose run --rm node yarn install
-	$(MAKE) .env
 
 dev:
 	docker-compose up
 
 .env:
-	@echo 'YARN_CACHE_DIR=$(YARN_CACHE_DIR)'  > $(@F)
+	@echo "making .env"
+	@echo 'DIR_YARN_CACHE=$(DIR_YARN_CACHE)'  > $(@F)
+	@echo 'PORT_STORYBOOK=$(PORT_STORYBOOK)' >> $(@F)
 
