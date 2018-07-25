@@ -1,0 +1,25 @@
+version: '3.4'
+services:
+  node:
+    image: node:10.7.0-alpine
+    working_dir: /app
+    command: yarn build-dev
+    volumes:
+      - .:/app
+      - node_modules:/app/node_modules
+      - yarn_cache:${DIR_YARN_CACHE}
+
+  storybook:
+    image: node:10.7.0-alpine
+    working_dir: /app
+    command: yarn run storybook
+    ports:
+      - ${PORT_STORYBOOK}:6006
+    volumes:
+      - .:/app
+      - node_modules:/app/node_modules
+      - yarn_cache:${DIR_YARN_CACHE}
+
+volumes:
+  yarn_cache:
+  node_modules:
