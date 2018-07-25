@@ -44,71 +44,71 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
  */
 
 module.exports = {
-	module: {
-		rules: [
-			{
-				include: [path.resolve(__dirname, 'src')],
-				loader: 'babel-loader',
+   module: {
+      rules: [
+         {
+            include: [path.resolve(__dirname, 'src')],
+            loader: 'babel-loader',
 
-				options: {
-					plugins: ['syntax-dynamic-import'],
+            options: {
+               plugins: ['syntax-dynamic-import'],
 
-					presets: [
-						[
-							'env',
-							{
-								modules: false
-							}
-						]
-					]
-				},
+               presets: [
+                  [
+                     'env',
+                     {
+                        modules: false
+                     }
+                  ]
+               ]
+            },
 
-				test: /\.js$/
-			},
-			{
-				test: /\.css$/,
+            test: /\.js$/
+         },
+         {
+            test: /\.css$/,
 
-				use: [
-					{
-						loader: MiniCssExtractPlugin.loader
-					},
-					{
-						loader: 'css-loader',
+            use: [
+               {
+                  loader: MiniCssExtractPlugin.loader
+               },
+               {
+                  loader: 'css-loader',
 
-						options: {
-							importLoaders: 1,
-							sourceMap: true
-						}
-					},
-					{
-						loader: 'postcss-loader',
+                  options: {
+                     importLoaders: 1,
+                     sourceMap: true
+                  }
+               },
+               {
+                  loader: 'postcss-loader',
 
-						options: {
-							plugins: function() {
-								return [precss, autoprefixer];
-							}
-						}
-					}
-				]
-			}
-		]
-	},
+                  options: {
+                     plugins: function() {
+                        return [precss, autoprefixer];
+                     }
+                  }
+               }
+            ]
+         }
+      ]
+   },
 
-	mode: 'production',
+   mode: 'production',
 
-	optimization: {
-		splitChunks: {
-			cacheGroups: {
-				vendors: {
-					priority: -10,
-					test: /[\\/]node_modules[\\/]/
-				}
-			},
+   optimization: {
+      splitChunks: {
+         cacheGroups: {
+            vendors: {
+               priority: -10,
+               test: /[\\/]node_modules[\\/]/
+            }
+         },
 
-			chunks: 'async',
-			minChunks: 1,
-			minSize: 30000,
-			name: false
-		}
-	}
+         chunks: 'async',
+         minChunks: 1,
+         minSize: 30000,
+         name: false
+      }
+   }
 };
