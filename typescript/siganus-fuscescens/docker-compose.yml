@@ -3,9 +3,11 @@ services:
   node:
     image: node:10.7.0-alpine
     working_dir: /app
+    command: yarn build-dev
     volumes:
       - .:/app
-      - node_modules:/app/node_modules
+      - ./node_modules:/app/node_modules
+      - yarn_cache:/usr/local/share/.cache/yarn/v1 # docker-compose run --rm node yarn cache dir
 
 volumes:
-  node_modules:
+  yarn_cache:
