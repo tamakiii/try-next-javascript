@@ -1,4 +1,4 @@
-YARN_CACHE_DIR ?= $(shell docker-compose run --rm node yarn cache dir | sed -e $$'s/[^[:blank:][:print:]]//g' | sed -e 's/\[2K\[1G//')
+YARN_CACHE_DIR ?= $(shell docker-compose run --rm node yarn cache dir | sed $$'s/\e\\[[[:digit:]][KG]//g')
 
 setup:
 	docker-compose run --rm node yarn install
