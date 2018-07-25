@@ -7,7 +7,7 @@ services:
     volumes:
       - .:/app
       - ./node_modules:/app/node_modules
-      - yarn_cache:/usr/local/share/.cache/yarn/v1 # docker-compose run --rm node yarn cache dir
+      - yarn_cache:${YARN_CACHE_DIR:-/usr/local/share/.cache/yarn/v1}
 
 volumes:
   yarn_cache:
