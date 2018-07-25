@@ -4,7 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "build-dev": "webpack --mode development --watch --progress",
+    "build-dev": "yarn install && webpack --mode development --watch --progress",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
   },
