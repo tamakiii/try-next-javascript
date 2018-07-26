@@ -50,9 +50,6 @@ module.exports = {
             loader: 'postcss-loader',
             options: {
               sourceMap: true,
-              plugins: [
-                require('autoprefixer')({ grid: true })
-              ],
               config: {
                 path: path.resolve(__dirname, 'postcss.config.js')
               }
