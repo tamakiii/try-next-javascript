@@ -1,0 +1,24 @@
+:root {
+  --primary-color: #f00;
+  --secondary-color: #0ff0;
+  --base-fontsize: 1rem;
+  --mainColor: red;
+
+  --danger-theme: {
+    color: white;
+    background-color: red;
+  };
+
+  --fontSize: 1rem;
+}
+
+#root {
+  text-align: center;
+}
+
+.App {
+  & section.body {
+    padding-top: 48px;
+    text-align: left;
+  }
+}
